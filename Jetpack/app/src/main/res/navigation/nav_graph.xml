@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.example.jetpack.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2" />
+        <action
+            android:id="@+id/action_fragment1_to_fragmentCamara"
+            app:destination="@id/fragmentCamara" />
+        <action
+            android:id="@+id/action_fragment1_to_fragmentCalculadora"
+            app:destination="@id/fragmentCalculadora" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.jetpack.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" />
+    <fragment
+        android:id="@+id/fragmentCamara"
+        android:name="com.example.jetpack.FragmentCamara"
+        android:label="fragment_camara"
+        tools:layout="@layout/fragment_camara" />
+    <fragment
+        android:id="@+id/fragmentCalculadora"
+        android:name="com.example.jetpack.FragmentCalculadora"
+        android:label="fragment_calculadora"
+        tools:layout="@layout/fragment_calculadora" >
+        <action
+            android:id="@+id/action_fragmentCalculadora_to_fragmentSuma"
+            app:destination="@id/fragmentSuma" />
+        <action
+            android:id="@+id/action_fragmentCalculadora_to_fragmentResta"
+            app:destination="@id/fragmentResta" />
+        <action
+            android:id="@+id/action_fragmentCalculadora_to_fragmentDivision"
+            app:destination="@id/fragmentDivision" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSuma"
+        android:name="com.example.jetpack.FragmentSuma"
+        android:label="fragment_suma"
+        tools:layout="@layout/fragment_suma" />
+    <fragment
+        android:id="@+id/fragmentResta"
+        android:name="com.example.jetpack.FragmentResta"
+        android:label="fragment_resta"
+        tools:layout="@layout/fragment_resta" />
+    <fragment
+        android:id="@+id/fragmentDivision"
+        android:name="com.example.jetpack.FragmentDivision"
+        android:label="fragment_division"
+        tools:layout="@layout/fragment_division" />
+</navigation>
